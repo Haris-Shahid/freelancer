@@ -84,7 +84,7 @@ function freelancer_meta_box_display_invoice( $object, $box ) {
 			<th><label for="freelancer_settings-invoice_counter"><?php _e( 'Actual Invoice Number:', 'freelancer' ); ?></label></th>
 			<td>
 				<input type="text" class="small-text" name="freelancer_settings[invoice_counter]" id="freelancer_settings-invoice_counter" value="<?php echo intval( $settings['invoice_counter'] ); ?>" />
-				<p class="description"><?php _e( 'The actual invoice number. All new invoice is incremental this value.', 'freelancer' ); ?></p>
+				<p class="description"><?php _e( 'The actual invoice number. All new invoices increment this value.', 'freelancer' ); ?></p>
 			</td>	
 		</tr>
 
@@ -92,7 +92,7 @@ function freelancer_meta_box_display_invoice( $object, $box ) {
 			<th><label for="freelancer_settings-invoice_currency_symbol"><?php _e( 'Invoice Currency Symbol:', 'freelancer' ); ?></label></th>
 			<td>
 				<input type="text" class="small-text" name="freelancer_settings[invoice_currency_symbol]" id="freelancer_settings-invoice_currency_symbol" value="<?php echo esc_attr( $settings['invoice_currency_symbol'] ); ?>" />
-				<p class="description"><?php _e( 'Choose your currency symbol for print in your invoices.', 'freelancer' ); ?></p>
+				<p class="description"><?php _e( 'Choose your currency symbol (Will be printed on your invoices)', 'freelancer' ); ?></p>
 			</td>
 		</tr>
 
@@ -130,7 +130,7 @@ function freelancer_meta_box_display_gateway_paypal( $object, $box ) {
 						<option value="<?php echo $paypal_currency_code; ?>" <?php selected( $settings['invoice_paypal_currency_code'], $paypal_currency_code ); ?>><?php echo $paypal_currency_code; ?></option>
 					<?php endforeach; ?>
 				</select>
-				<p class="description"><?php echo sprintf( __( 'Choose the paypal currency code. You can see here your code: <code><a href="%s">%s</a></code>', 'freelancer' ), 'https://cms.paypal.com/mx/cgi-bin/?cmd=_render-content&content_ID=developer/e_howto_api_nvp_currency_codes', __( 'Paypal Currency Code', 'freelancer' ) ); ?></p>
+				<p class="description"><?php echo sprintf( __( 'Choose the paypal currency code. You can see your code here: <code><a href="%s">%s</a></code>', 'freelancer' ), 'https://cms.paypal.com/mx/cgi-bin/?cmd=_render-content&content_ID=developer/e_howto_api_nvp_currency_codes', __( 'Paypal Currency Code', 'freelancer' ) ); ?></p>
 			</td>
 		</tr>
 
@@ -138,7 +138,7 @@ function freelancer_meta_box_display_gateway_paypal( $object, $box ) {
 			<th><label for="freelancer_settings-invoice_paypal_business_email"><?php _e( 'Paypal Business Email:', 'freelancer' ); ?></label></th>
 			<td>
 				<input type="text" class="regular-text" name="freelancer_settings[invoice_paypal_business_email]" id="freelancer_settings-invoice_paypal_business_email" value="<?php echo esc_attr( $settings['invoice_paypal_business_email'] ); ?>" />
-				<p class="description"><?php _e( 'Use your business email for take online payments.', 'freelancer' ); ?></p>
+				<p class="description"><?php _e( 'Use your business email to recieve online payments', 'freelancer' ); ?></p>
 			</td>
 		</tr>
 	</table>
